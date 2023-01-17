@@ -1,0 +1,81 @@
+#include <queue>
+static std::queue<int> *_threads_queue;
+static int _timeslice;
+static int _ticked;
+static int _current_thread_id;
+
+void switch_to_next_thread()
+{
+    _ticked = 0;
+
+    if (_threads_queue->size())
+    {
+        _current_thread_id = _threads_queue->front();
+        _threads_queue->pop();
+    }
+    else
+    {
+        _current_thread_id = -1;
+    }
+}
+
+void scheduler_setup(int timeslice)
+{
+   _threads_queue = new std::queue<int>();
+    _timeslice = timeslice;
+    _ticked = 0;
+    _current_thread_id = -1;
+}
+
+void new_thread(int thread_id)
+{
+     if (_current_thread_id == -1)
+    {
+        _current_thread_id = thread_id;
+    }
+    else
+    {
+        _threads_queue->push(thread_id);
+    } 
+}
+
+void exit_thread()
+{
+    switch_to_next_thread();
+}
+
+void block_thread()
+{
+    switch_to_next_thread();
+}
+
+void wake_thread(int thread_id)
+{
+    if (_current_thread_id == -1)
+    {
+        _current_thread_id = thread_id;
+    }
+    else
+    {
+        _threads_queue->push(thread_id);
+    }
+}
+
+void timer_tick()
+{
+      if (_current_thread_id == -1)
+    {
+        return;
+    }
+
+    if (++_ticked == _timeslice)
+    {
+        _threads_queue->push(_current_thread_id);
+        switch_to_next_thread();
+    }
+}
+
+int current_thread()
+{
+     return _current_thread_id;
+}
