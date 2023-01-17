@@ -1,0 +1,145 @@
+kostyan@kostyan-VirtualBox:~$ cat file1
+dsadasd
+asfasf
+asfasf
+kostyan@kostyan-VirtualBox:~$ ls
+Desktop    Downloads  file1  Pictures  snap       Videos
+Documents  file       Music  Public    Templates
+kostyan@kostyan-VirtualBox:~$ cat file
+kostyan@kostyan-VirtualBox:~$ rm -f file
+kostyan@kostyan-VirtualBox:~$ ls
+Desktop    Downloads  Music     Public  Templates
+Documents  file1      Pictures  snap    Videos
+kostyan@kostyan-VirtualBox:~$ cp file1 file2
+kostyan@kostyan-VirtualBox:~$ cat file2
+dsadasd
+asfasf
+asfasf
+kostyan@kostyan-VirtualBox:~$ ln -s file1 file3
+kostyan@kostyan-VirtualBox:~$ ln file1 file4
+kostyan@kostyan-VirtualBox:~$ ls -li
+total 48
+418168 drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Desktop
+418172 drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Documents
+418169 drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Downloads
+403754 -rw-rw-r-- 2 kostyan kostyan   22 ноя 21 01:21 file1
+403751 -rw-rw-r-- 1 kostyan kostyan   22 ноя 21 01:22 file2
+403756 lrwxrwxrwx 1 kostyan kostyan    5 ноя 21 01:23 file3 -> file1
+403754 -rw-rw-r-- 2 kostyan kostyan   22 ноя 21 01:21 file4
+418173 drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Music
+418174 drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Pictures
+418171 drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Public
+418146 drwx------ 3 kostyan kostyan 4096 ноя 21 00:31 snap
+418170 drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Templates
+418175 drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Videos
+kostyan@kostyan-VirtualBox:~$ rm file1
+kostyan@kostyan-VirtualBox:~$ ls -li
+total 44
+418168 drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Desktop
+418172 drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Documents
+418169 drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Downloads
+403751 -rw-rw-r-- 1 kostyan kostyan   22 ноя 21 01:22 file2
+403756 lrwxrwxrwx 1 kostyan kostyan    5 ноя 21 01:23 file3 -> file1
+403754 -rw-rw-r-- 1 kostyan kostyan   22 ноя 21 01:21 file4
+418173 drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Music
+418174 drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Pictures
+418171 drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Public
+418146 drwx------ 3 kostyan kostyan 4096 ноя 21 00:31 snap
+418170 drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Templates
+418175 drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Videos
+//file2 без изменений
+//file3 -> file1 выделен красным, скорее всего из-за удаления как ни странно
+//file4 без изменений
+kostyan@kostyan-VirtualBox:~$ cat file2
+dsadasd
+asfasf
+asfasf
+kostyan@kostyan-VirtualBox:~$ cat file3
+cat: file3: No such file or directory
+kostyan@kostyan-VirtualBox:~$ cat file4
+dsadasd
+asfasf
+asfasf
+kostyan@kostyan-VirtualBox:~$ ls
+Desktop    Downloads  file3  Music     Public  Templates
+Documents  file2      file4  Pictures  snap    Videos
+kostyan@kostyan-VirtualBox:~$ mv file2 file22
+kostyan@kostyan-VirtualBox:~$ mv file3 file33
+kostyan@kostyan-VirtualBox:~$ mv file4 file44
+kostyan@kostyan-VirtualBox:~$ ls
+Desktop    Downloads  file33  Music     Public  Templates
+Documents  file22     file44  Pictures  snap    Videos
+kostyan@kostyan-VirtualBox:~$ ln -s file22 file2_link
+kostyan@kostyan-VirtualBox:~$ ls
+Desktop    Downloads  file2_link  file44  Pictures  snap       Videos
+Documents  file22     file33      Music   Public    Templates
+kostyan@kostyan-VirtualBox:~$ mv file2_link /tmp/
+kostyan@kostyan-VirtualBox:~$ mv file33 /tmp/
+kostyan@kostyan-VirtualBox:~$ mv file44 /tmp/
+kostyan@kostyan-VirtualBox:~$ ls
+Desktop    Downloads  Music     Public  Templates
+Documents  file22     Pictures  snap    Videos
+kostyan@kostyan-VirtualBox:~$ cd /tmp
+kostyan@kostyan-VirtualBox:/tmp$ ls
+file2_link
+file33
+file44
+snap.firefox
+snap.snapd-desktop-integration
+snap.snap-store
+systemd-private-2913a10b97c24ca6a2c72eab24562e8d-colord.service-DnS08g
+systemd-private-2913a10b97c24ca6a2c72eab24562e8d-ModemManager.service-g20Vqa
+systemd-private-2913a10b97c24ca6a2c72eab24562e8d-power-profiles-daemon.service-dDp7GF
+systemd-private-2913a10b97c24ca6a2c72eab24562e8d-switcheroo-control.service-pqrMFt
+systemd-private-2913a10b97c24ca6a2c72eab24562e8d-systemd-logind.service-mITgpw
+systemd-private-2913a10b97c24ca6a2c72eab24562e8d-systemd-oomd.service-tkuDsS
+systemd-private-2913a10b97c24ca6a2c72eab24562e8d-systemd-resolved.service-VeOXCp
+systemd-private-2913a10b97c24ca6a2c72eab24562e8d-systemd-timesyncd.service-Ze4eRQ
+systemd-private-2913a10b97c24ca6a2c72eab24562e8d-upower.service-R2CK2z
+tracker-extract-3-files.1000
+tracker-extract-3-files.127
+VMwareDnD
+kostyan@kostyan-VirtualBox:~$ echo yes > file1
+kostyan@kostyan-VirtualBox:~$ echo no > file2
+kostyan@kostyan-VirtualBox:~$ ls -l
+total 44
+drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Desktop
+drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Documents
+drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Downloads
+-rw-rw-r-- 1 kostyan kostyan    4 ноя 21 01:50 file1
+-rw-rw-r-- 1 kostyan kostyan    3 ноя 21 01:50 file2
+drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Music
+drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Pictures
+drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Public
+drwx------ 3 kostyan kostyan 4096 ноя 21 00:31 snap
+drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Templates
+drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Videos
+kostyan@kostyan-VirtualBox:~$ chmod 664 file1
+kostyan@kostyan-VirtualBox:~$ ls -l
+total 44
+drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Desktop
+drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Documents
+drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Downloads
+-rw-rw-r-- 1 kostyan kostyan    4 ноя 21 01:50 file1
+-rw-rw-r-- 1 kostyan kostyan    3 ноя 21 01:50 file2
+drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Music
+drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Pictures
+drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Public
+drwx------ 3 kostyan kostyan 4096 ноя 21 00:31 snap
+drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Templates
+drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Videos
+kostyan@kostyan-VirtualBox:~$ chmod 600 file2
+kostyan@kostyan-VirtualBox:~$ ls -l
+total 44
+drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Desktop
+drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Documents
+drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Downloads
+-rw-rw-r-- 1 kostyan kostyan    4 ноя 21 01:50 file1
+-rw------- 1 kostyan kostyan    3 ноя 21 01:50 file2
+drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Music
+drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Pictures
+drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Public
+drwx------ 3 kostyan kostyan 4096 ноя 21 00:31 snap
+drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Templates
+drwxr-xr-x 2 kostyan kostyan 4096 ноя 21 00:31 Videos
+kostyan@kostyan-VirtualBox:~$

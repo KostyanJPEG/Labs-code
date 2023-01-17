@@ -1,0 +1,283 @@
+kostyan@kostyan-VirtualBox:~$ echo first line > f1
+kostyan@kostyan-VirtualBox:~$ ls
+Desktop    Downloads  Music     Public  Templates
+Documents  f1         Pictures  snap    Videos
+kostyan@kostyan-VirtualBox:~$ more f1
+first line
+kostyan@kostyan-VirtualBox:~$ rm -f f1
+kostyan@kostyan-VirtualBox:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+kostyan@kostyan-VirtualBox:~$ cat /etc 2> errors
+kostyan@kostyan-VirtualBox:~$ ls
+Desktop    Downloads  Music     Public  Templates
+Documents  errors     Pictures  snap    Videos
+kostyan@kostyan-VirtualBox:~$ cat errors
+cat: /etc: Is a directory
+kostyan@kostyan-VirtualBox:~$ rm -f errors
+kostyan@kostyan-VirtualBox:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+total 1096
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+-rw-r-----
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+drwxr-s---
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+-rw-rw-r--
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+-rw-r-----
+-rw-r-----
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+lrwxrwxrwx
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+-r--r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+lrwxrwxrwx
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+-rwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+lrwxrwxrwx
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+-rw-rw-r--
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+lrwxrwxrwx
+lrwxrwxrwx
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+-rw-r-----
+-rw-r-----
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-r--r-----
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+lrwxrwxrwx
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+kostyan@kostyan-VirtualBox:~$ ls -l /etc | cut -b 1-10 | sort | uniq
+drwxr-s---
+drwxr-xr-x
+lrwxrwxrwx
+-r--r-----
+-r--r--r--
+-rw-r-----
+-rw-r--r--
+-rw-rw-r--
+-rwxr-xr-x
+total 1096
+kostyan@kostyan-VirtualBox:~$ sudo vim /etc/ssh/sshd_config
+[sudo] password for kostyan: //отключил аутентификацию по паролю PasswordAuthentication no
+kostyan@kostyan-VirtualBox:~$ systemctl restart sshd
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
+Authentication is required to restart 'ssh.service'.
+Authenticating as: kostyan,,, (kostyan)
+Password:
+==== AUTHENTICATION COMPLETE ===
+kostyan@kostyan-VirtualBox:~$ sudo vim /etc/ssh/sshd_config
+kostyan@kostyan-VirtualBox:~$ systemctl reload sshd
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
+Authentication is required to reload 'ssh.service'.
+Authenticating as: kostyan,,, (kostyan)
+Password:
+==== AUTHENTICATION COMPLETE ===
+//В чём различие между действиями restart и reload?
+//Restart останавливает службу и заново запускает.
+//Reload даёт команду службе перечитать файлы конфигурации без остановки работы.
+kostyan@kostyan-VirtualBox:~$ cat > file
+fasfas
+sfasf
+fasf
+//Какой сигнал передадим процессу?
+//Никакой, ctrl+d это EOF и у меня все закрылось....
+kostyan@kostyan-VirtualBox:~$ mc
+kostyan@kostyan-VirtualBox:~$ ps -a
+    PID TTY          TIME CMD
+   1474 tty2     00:00:00 gnome-session-b
+   4288 pts/0    00:00:00 ps
+kostyan@kostyan-VirtualBox:~$ kill -9 4288

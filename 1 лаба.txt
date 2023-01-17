@@ -1,0 +1,116 @@
+login as: kostyan
+kostyan@192.168.0.10's password:
+Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-48-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+100 updates can be applied immediately.
+37 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+Last login: Fri Sep 23 02:49:50 2022 from 192.168.0.6
+kostyan@kostyan-ubuntu:~$ hostnamectl
+ Static hostname: kostyan-ubuntu
+       Icon name: computer-vm
+         Chassis: vm
+      Machine ID: f28fe7870eb24647bbea6ae3cd4ce47b
+         Boot ID: bfb4fec635dd4bfbb36e7ae74706feb9
+  Virtualization: oracle
+Operating System: Ubuntu 22.04.1 LTS
+          Kernel: Linux 5.15.0-48-generic
+    Architecture: x86-64
+ Hardware Vendor: innotek GmbH
+  Hardware Model: VirtualBox
+kostyan@kostyan-ubuntu:~$ pwd
+/home/kostyan
+kostyan@kostyan-ubuntu:~$ mkdir students
+kostyan@kostyan-ubuntu:~$ mkdir mentors
+kostyan@kostyan-ubuntu:~$ ls
+kostyan@kostyan-VirtualBox:~$ ls
+Desktop    Downloads  Music     Public  students   Videos
+Documents  mentors    Pictures  snap    Templates
+kostyan@kostyan-VirtualBox:~$ cd /students
+-bash: cd: /students: No such file or directory
+kostyan@kostyan-VirtualBox:~$ ls
+Desktop    Downloads  Music     Public  students   Videos
+Documents  mentors    Pictures  snap    Templates
+kostyan@kostyan-VirtualBox:~$ cd students
+kostyan@kostyan-VirtualBox:~/students$ ls
+kostyan@kostyan-VirtualBox:~/students$ pwd
+/home/kostyan/students
+kostyan@kostyan-VirtualBox:~/students$ touch students_list.txt
+kostyan@kostyan-VirtualBox:~/students$ ls
+students_list.txt
+kostyan@kostyan-VirtualBox:~/students$ cd
+kostyan@kostyan-VirtualBox:~$ ls
+Desktop    Downloads  Music     Public  students   Videos
+Documents  mentors    Pictures  snap    Templates
+kostyan@kostyan-VirtualBox:~$ cd mentors
+kostyan@kostyan-VirtualBox:~/mentors$ touch mentors_list.txt
+kostyan@kostyan-VirtualBox:~/mentors$ ды
+ды: command not found
+kostyan@kostyan-VirtualBox:~/mentors$ ls
+mentors_list.txt
+kostyan@kostyan-VirtualBox:~/mentors$ more mentors_list.txt
+Galina Petrovna
+Aleksandra Nikolaevna
+Sergey Petrovich
+kostyan@kostyan-VirtualBox:~/mentors$ cd
+kostyan@kostyan-VirtualBox:~$ ls
+Desktop    Downloads  Music     Public  students   Videos
+Documents  mentors    Pictures  snap    Templates
+kostyan@kostyan-VirtualBox:~$ cd students
+kostyan@kostyan-VirtualBox:~/students$ ls
+students_list.txt
+kostyan@kostyan-VirtualBox:~/students$ more students_list.txt
+Aulova Lada
+Suryaninova Veronica
+Ichenko Artem
+Bulatov Andrey
+Pavluchenko Philip
+Naumov Konstantin
+Volodina Ekaterina
+Larchenko Polina
+Gyseva Maria
+Vasileiv Leonid
+Volosov Egor
+Grishin Danila
+Paliy Elizaveta
+Efreemova Olecia
+Ufimtsev German
+Safonov Pavel
+Yarosh Denis
+kostyan@kostyan-VirtualBox:~/students$ ls
+students_list.txt
+kostyan@kostyan-VirtualBox:~/students$ cd
+kostyan@kostyan-VirtualBox:~$ mv mentors/mentors_list.txt students/
+kostyan@kostyan-VirtualBox:~$ ls
+Desktop    Downloads  Music     Public  students   Videos
+Documents  mentors    Pictures  snap    Templates
+kostyan@kostyan-VirtualBox:~$ cd mentors
+kostyan@kostyan-VirtualBox:~/mentors$ ls
+kostyan@kostyan-VirtualBox:~/mentors$ cd
+kostyan@kostyan-VirtualBox:~$ cd students
+kostyan@kostyan-VirtualBox:~/students$ ls
+mentors_list.txt  students_list.txt
+kostyan@kostyan-VirtualBox:~/students$ cd
+kostyan@kostyan-VirtualBox:~$ ls
+Desktop    Downloads  Music     Public  students   Videos
+Documents  mentors    Pictures  snap    Templates
+kostyan@kostyan-VirtualBox:~$ rmdir mentors
+kostyan@kostyan-VirtualBox:~$ ls
+Desktop    Downloads  Pictures  snap      Templates
+Documents  Music      Public    students  Videos
+kostyan@kostyan-VirtualBox:~$ mv students students_and_mentors
+kostyan@kostyan-VirtualBox:~$ ls
+Desktop    Downloads  Pictures  snap                  Templates
+Documents  Music      Public    students_and_mentors  Videos
+kostyan@kostyan-VirtualBox:~$ rm -Rfv students_and_mentors
+removed 'students_and_mentors/mentors_list.txt'
+removed 'students_and_mentors/students_list.txt'
+removed directory 'students_and_mentors'
+kostyan@kostyan-VirtualBox:~$ ls
+Desktop    Downloads  Music     Public  snap       Videos
+Documents  mentors    Pictures    Templates
