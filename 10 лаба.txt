@@ -1,0 +1,435 @@
+kostyan@kostyan-VirtualBox:~$ sudo apt update
+Hit:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:3 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Fetched 110 kB in 11s (10,2 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+118 packages can be upgraded. Run 'apt list --upgradable' to see them.
+kostyan@kostyan-VirtualBox:~$ sudo apt install apt-transport-https ca-certificates curl software-properties-common
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+ca-certificates is already the newest version (20211016ubuntu0.22.04.1).
+ca-certificates set to manually installed.
+The following packages were automatically installed and are no longer required:
+  libnginx-mod-http-geoip2 libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter libnginx-mod-mail
+  libnginx-mod-stream libnginx-mod-stream-geoip2 nginx-common nginx-core systemd-hwe-hwdb
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  python3-software-properties software-properties-gtk
+The following NEW packages will be installed:
+  apt-transport-https curl
+The following packages will be upgraded:
+  python3-software-properties software-properties-common software-properties-gtk
+3 upgraded, 2 newly installed, 0 to remove and 115 not upgraded.
+Need to get 304 kB of archives.
+After this operation, 622 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 apt-transport-https all 2.4.8 [1 506 B]
+Get:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 curl amd64 7.81.0-1ubuntu1.6 [194 kB]
+Get:3 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 software-properties-common all 0.99.22.3 [14,1 kB]
+Get:4 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 software-properties-gtk all 0.99.22.3 [65,2 kB]
+Get:5 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-software-properties all 0.99.22.3 [28,8 kB]
+Fetched 304 kB in 10s (29,7 kB/s)
+Selecting previously unselected package apt-transport-https.
+(Reading database ... 176915 files and directories currently installed.)
+Preparing to unpack .../apt-transport-https_2.4.8_all.deb ...
+Unpacking apt-transport-https (2.4.8) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../curl_7.81.0-1ubuntu1.6_amd64.deb ...
+Unpacking curl (7.81.0-1ubuntu1.6) ...
+Preparing to unpack .../software-properties-common_0.99.22.3_all.deb ...
+Unpacking software-properties-common (0.99.22.3) over (0.99.22.2) ...
+Preparing to unpack .../software-properties-gtk_0.99.22.3_all.deb ...
+Unpacking software-properties-gtk (0.99.22.3) over (0.99.22.2) ...
+Preparing to unpack .../python3-software-properties_0.99.22.3_all.deb ...
+Unpacking python3-software-properties (0.99.22.3) over (0.99.22.2) ...
+Setting up apt-transport-https (2.4.8) ...
+Setting up python3-software-properties (0.99.22.3) ...
+Setting up curl (7.81.0-1ubuntu1.6) ...
+Setting up software-properties-common (0.99.22.3) ...
+Setting up software-properties-gtk (0.99.22.3) ...
+Processing triggers for dbus (1.12.20-2ubuntu4.1) ...
+Processing triggers for shared-mime-info (2.1-2) ...
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+Processing triggers for libglib2.0-0:amd64 (2.72.1-1) ...
+Processing triggers for man-db (2.10.2-1) ...
+kostyan@kostyan-VirtualBox:~$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+OK
+kostyan@kostyan-VirtualBox:~$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+Repository: 'deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable'
+Description:
+Archive for codename: focal components: stable
+More info: https://download.docker.com/linux/ubuntu
+Adding repository.
+Press [ENTER] to continue or Ctrl-c to cancel.
+Adding deb entry to /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list
+Adding disabled deb-src entry to /etc/apt/sources.list.d/archive_uri-https_download_docker_com_linux_ubuntu-jammy.list
+Hit:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:3 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Get:5 https://download.docker.com/linux/ubuntu focal InRelease [57,7 kB]
+Get:6 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages [21,3 kB]
+Fetched 79,0 kB in 11s (7 148 B/s)
+Reading package lists... Done
+W: https://download.docker.com/linux/ubuntu/dists/focal/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+kostyan@kostyan-VirtualBox:~$ sudo apt update
+Hit:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:3 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Hit:4 https://download.docker.com/linux/ubuntu focal InRelease
+Hit:5 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+115 packages can be upgraded. Run 'apt list --upgradable' to see them.
+W: https://download.docker.com/linux/ubuntu/dists/focal/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+kostyan@kostyan-VirtualBox:~$ apt-cache policy docker-ce
+docker-ce:
+  Installed: (none)
+  Candidate: 5:20.10.21~3-0~ubuntu-focal
+  Version table:
+     5:20.10.21~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.20~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.19~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.18~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.17~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.16~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.15~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.14~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.13~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.12~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.11~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.10~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.9~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.8~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.7~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.6~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.5~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.4~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.3~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.2~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.1~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.0~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:19.03.15~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:19.03.14~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:19.03.13~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:19.03.12~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:19.03.11~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:19.03.10~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:19.03.9~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+kostyan@kostyan-VirtualBox:~$ sudo apt install docker-ce
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libnginx-mod-http-geoip2 libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter libnginx-mod-mail
+  libnginx-mod-stream libnginx-mod-stream-geoip2 nginx-common nginx-core systemd-hwe-hwdb
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  containerd.io docker-ce-cli docker-ce-rootless-extras docker-scan-plugin git git-man liberror-perl libslirp0 pigz
+  slirp4netns
+Suggested packages:
+  aufs-tools cgroupfs-mount | cgroup-lite git-daemon-run | git-daemon-sysvinit git-doc git-email git-gui gitk gitweb
+  git-cvs git-mediawiki git-svn
+The following NEW packages will be installed:
+  containerd.io docker-ce docker-ce-cli docker-ce-rootless-extras docker-scan-plugin git git-man liberror-perl
+  libslirp0 pigz slirp4netns
+0 upgraded, 11 newly installed, 0 to remove and 115 not upgraded.
+Need to get 106 MB of archives.
+After this operation, 404 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ru.archive.ubuntu.com/ubuntu jammy/universe amd64 pigz amd64 2.6-1 [63,6 kB]
+Get:2 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 liberror-perl all 0.17029-1 [26,5 kB]
+Get:3 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 git-man all 1:2.34.1-1ubuntu1.5 [953 kB]
+Get:4 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 git amd64 1:2.34.1-1ubuntu1.5 [3 132 kB]
+Get:5 https://download.docker.com/linux/ubuntu focal/stable amd64 containerd.io amd64 1.6.12-1 [27,7 MB]
+Get:6 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 libslirp0 amd64 4.6.1-1build1 [61,5 kB]
+Get:7 http://ru.archive.ubuntu.com/ubuntu jammy/universe amd64 slirp4netns amd64 1.0.1-2 [28,2 kB]
+Get:8 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-ce-cli amd64 5:20.10.21~3-0~ubuntu-focal [41,5 MB]
+Get:9 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-ce amd64 5:20.10.21~3-0~ubuntu-focal [20,5 MB]
+Get:10 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-ce-rootless-extras amd64 5:20.10.21~3-0~ubuntu-focal [8 394 kB]
+Get:11 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-scan-plugin amd64 0.21.0~ubuntu-focal [3 622 kB]
+Fetched 106 MB in 26s (4 024 kB/s)
+Selecting previously unselected package pigz.
+(Reading database ... 176926 files and directories currently installed.)
+Preparing to unpack .../00-pigz_2.6-1_amd64.deb ...
+Unpacking pigz (2.6-1) ...
+Selecting previously unselected package containerd.io.
+Preparing to unpack .../01-containerd.io_1.6.12-1_amd64.deb ...
+Unpacking containerd.io (1.6.12-1) ...
+Selecting previously unselected package docker-ce-cli.
+Preparing to unpack .../02-docker-ce-cli_5%3a20.10.21~3-0~ubuntu-focal_amd64.deb ...
+Unpacking docker-ce-cli (5:20.10.21~3-0~ubuntu-focal) ...
+Selecting previously unselected package docker-ce.
+Preparing to unpack .../03-docker-ce_5%3a20.10.21~3-0~ubuntu-focal_amd64.deb ...
+Unpacking docker-ce (5:20.10.21~3-0~ubuntu-focal) ...
+Selecting previously unselected package docker-ce-rootless-extras.
+Preparing to unpack .../04-docker-ce-rootless-extras_5%3a20.10.21~3-0~ubuntu-focal_amd64.deb ...
+Unpacking docker-ce-rootless-extras (5:20.10.21~3-0~ubuntu-focal) ...
+Selecting previously unselected package docker-scan-plugin.
+Preparing to unpack .../05-docker-scan-plugin_0.21.0~ubuntu-focal_amd64.deb ...
+Unpacking docker-scan-plugin (0.21.0~ubuntu-focal) ...
+Selecting previously unselected package liberror-perl.
+Preparing to unpack .../06-liberror-perl_0.17029-1_all.deb ...
+Unpacking liberror-perl (0.17029-1) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../07-git-man_1%3a2.34.1-1ubuntu1.5_all.deb ...
+Unpacking git-man (1:2.34.1-1ubuntu1.5) ...
+Selecting previously unselected package git.
+Preparing to unpack .../08-git_1%3a2.34.1-1ubuntu1.5_amd64.deb ...
+Unpacking git (1:2.34.1-1ubuntu1.5) ...
+Selecting previously unselected package libslirp0:amd64.
+Preparing to unpack .../09-libslirp0_4.6.1-1build1_amd64.deb ...
+Unpacking libslirp0:amd64 (4.6.1-1build1) ...
+Selecting previously unselected package slirp4netns.
+Preparing to unpack .../10-slirp4netns_1.0.1-2_amd64.deb ...
+Unpacking slirp4netns (1.0.1-2) ...
+Setting up docker-scan-plugin (0.21.0~ubuntu-focal) ...
+Setting up liberror-perl (0.17029-1) ...
+Setting up containerd.io (1.6.12-1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /lib/systemd/system/containerd.service.
+Setting up docker-ce-cli (5:20.10.21~3-0~ubuntu-focal) ...
+Setting up libslirp0:amd64 (4.6.1-1build1) ...
+Setting up pigz (2.6-1) ...
+Setting up git-man (1:2.34.1-1ubuntu1.5) ...
+Setting up docker-ce-rootless-extras (5:20.10.21~3-0~ubuntu-focal) ...
+Setting up slirp4netns (1.0.1-2) ...
+Setting up docker-ce (5:20.10.21~3-0~ubuntu-focal) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /lib/systemd/system/docker.service.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/systemd/system/docker.socket.
+Setting up git (1:2.34.1-1ubuntu1.5) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+kostyan@kostyan-VirtualBox:~$ sudo systemctl status docker
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: active (running) since Fri 2022-12-09 19:57:01 MSK; 55s ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 55522 (dockerd)
+      Tasks: 7
+     Memory: 22.0M
+        CPU: 427ms
+     CGroup: /system.slice/docker.service
+             └─55522 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+дек 09 19:56:59 kostyan-VirtualBox dockerd[55522]: time="2022-12-09T19:56:59.440594862+03:00" level=info msg="scheme \">
+дек 09 19:56:59 kostyan-VirtualBox dockerd[55522]: time="2022-12-09T19:56:59.441120522+03:00" level=info msg="ccResolve>
+дек 09 19:56:59 kostyan-VirtualBox dockerd[55522]: time="2022-12-09T19:56:59.441248386+03:00" level=info msg="ClientCon>
+дек 09 19:56:59 kostyan-VirtualBox dockerd[55522]: time="2022-12-09T19:56:59.976209089+03:00" level=info msg="Loading c>
+дек 09 19:57:00 kostyan-VirtualBox dockerd[55522]: time="2022-12-09T19:57:00.313639173+03:00" level=info msg="Default b>
+дек 09 19:57:00 kostyan-VirtualBox dockerd[55522]: time="2022-12-09T19:57:00.641528197+03:00" level=info msg="Loading c>
+дек 09 19:57:00 kostyan-VirtualBox dockerd[55522]: time="2022-12-09T19:57:00.874491468+03:00" level=info msg="Docker da>
+дек 09 19:57:00 kostyan-VirtualBox dockerd[55522]: time="2022-12-09T19:57:00.874853441+03:00" level=info msg="Daemon ha>
+дек 09 19:57:01 kostyan-VirtualBox systemd[1]: Started Docker Application Container Engine.
+дек 09 19:57:01 kostyan-VirtualBox dockerd[55522]: time="2022-12-09T19:57:01.323655040+03:00" level=info msg="API liste>
+lines 1-22/22 (END)
+kostyan@kostyan-VirtualBox:~$ sudo docker run hello-world
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+2db29710123e: Pull complete
+Digest: sha256:faa03e786c97f07ef34423fccceeec2398ec8a5759259f94d99078f264e9d7af
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+kostyan@kostyan-VirtualBox:~$ sudo docker ps -a
+[sudo] password for kostyan:
+CONTAINER ID   IMAGE         COMMAND    CREATED          STATUS                      PORTS     NAMES
+adb1c0c9545e   hello-world   "/hello"   51 minutes ago   Exited (0) 51 minutes ago             wizardly_brown
+kostyan@kostyan-VirtualBox:~$ sudo docker run ubuntu
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+6e3729cf69e0: Pull complete
+Digest: sha256:27cb6e6ccef575a4698b66f5de06c7ecd61589132d5a91d098f7f3f9285415a9
+Status: Downloaded newer image for ubuntu:latest
+kostyan@kostyan-VirtualBox:~$ sudo docker ps -a
+CONTAINER ID   IMAGE         COMMAND    CREATED          STATUS                      PORTS     NAMES
+ff0589acf6ab   ubuntu        "bash"     4 seconds ago    Exited (0) 2 seconds ago              beautiful_poitras
+adb1c0c9545e   hello-world   "/hello"   52 minutes ago   Exited (0) 52 minutes ago             wizardly_brown
+kostyan@kostyan-VirtualBox:~$ nano Dockerfile
+kostyan@kostyan-VirtualBox:~$ sudo docker build -t nginx-php-fpm . 
+
+Sending build context to Docker daemon    152MB
+
+Step 1/7 : FROM unubtu:latest
+
+pull access denied for unubtu, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
+
+kostyan@kostyan-VirtualBox:~$ apt-cache policy docker-ce
+docker-ce:
+  Installed: 5:20.10.21~3-0~ubuntu-focal
+  Candidate: 5:20.10.21~3-0~ubuntu-focal
+  Version table:
+ *** 5:20.10.21~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+        100 /var/lib/dpkg/status
+     5:20.10.20~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.19~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.18~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.17~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.16~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.15~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.14~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.13~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.12~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.11~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.10~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.9~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.8~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.7~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.6~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.5~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.4~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.3~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.2~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.1~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:20.10.0~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:19.03.15~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:19.03.14~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:19.03.13~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:19.03.12~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:19.03.11~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:19.03.10~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+     5:19.03.9~3-0~ubuntu-focal 500
+        500 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages
+kostyan@kostyan-VirtualBox:~$ sudo systemctl status docker
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: active (running) since Fri 2022-12-09 19:57:01 MSK; 1h 2min ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 55522 (dockerd)
+      Tasks: 9
+     Memory: 124.2M
+        CPU: 4.048s
+     CGroup: /system.slice/docker.service
+             └─55522 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+дек 09 19:56:59 kostyan-VirtualBox dockerd[55522]: time="2022-12-09T19:56:59.441248386+03:00" level=info msg="ClientCon>
+дек 09 19:56:59 kostyan-VirtualBox dockerd[55522]: time="2022-12-09T19:56:59.976209089+03:00" level=info msg="Loading c>
+дек 09 19:57:00 kostyan-VirtualBox dockerd[55522]: time="2022-12-09T19:57:00.313639173+03:00" level=info msg="Default b>
+дек 09 19:57:00 kostyan-VirtualBox dockerd[55522]: time="2022-12-09T19:57:00.641528197+03:00" level=info msg="Loading c>
+дек 09 19:57:00 kostyan-VirtualBox dockerd[55522]: time="2022-12-09T19:57:00.874491468+03:00" level=info msg="Docker da>
+дек 09 19:57:00 kostyan-VirtualBox dockerd[55522]: time="2022-12-09T19:57:00.874853441+03:00" level=info msg="Daemon ha>
+дек 09 19:57:01 kostyan-VirtualBox systemd[1]: Started Docker Application Container Engine.
+дек 09 19:57:01 kostyan-VirtualBox dockerd[55522]: time="2022-12-09T19:57:01.323655040+03:00" level=info msg="API liste>
+дек 09 19:59:29 kostyan-VirtualBox dockerd[55522]: time="2022-12-09T19:59:29.636009518+03:00" level=info msg="ignoring >
+дек 09 20:51:50 kostyan-VirtualBox dockerd[55522]: time="2022-12-09T20:51:50.151024644+03:00" level=info msg="ignoring >
+lines 1-22/22 (END)
+kostyan@kostyan-VirtualBox:~$ id -nG
+kostyan adm cdrom sudo dip plugdev lpadmin lxd sambashare
+kostyan@kostyan-VirtualBox:~$ su -
+Password:
+su: Authentication failure
+kostyan@kostyan-VirtualBox:~$ sudo -s
+root@kostyan-VirtualBox:/home/kostyan# sudo usermod -aG docker kostyan
+root@kostyan-VirtualBox:/home/kostyan# exit
+exit
+kostyan@kostyan-VirtualBox:~$ id -nG
+kostyan adm cdrom sudo dip plugdev lpadmin lxd sambashare
+kostyan@kostyan-VirtualBox:~$ sudo docker build -t nginx-php-fpm
+Sending build context to Docker daemon    152MB
+Step 1/7 : FROM unubtu:latest
+pull access denied for unubtu, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
+kostyan@kostyan-VirtualBox:~$ docker run -it ubuntu
+docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/create": dial unix /var/run/docker.sock: connect: permission denied.
+See 'docker run --help'.
+kostyan@kostyan-VirtualBox:~$ su kostyan1
+Пароль: 
+su: Сбой при проверке подлинности
+kostyan@kostyan-VirtualBox:~$ su -s 
+su: ключ должен использоваться с аргументом — «s»
+Try 'su --help' for more information.
+kostyan@kostyan-VirtualBox:~$ su kostyan1
+Пароль: 
+su: Сбой при проверке подлинности
+kostyan@kostyan-VirtualBox:~$ sudo docker run -it ubuntu
+root@e50083920877:/# ^C
+root@e50083920877:/# exit
+exit
+kostyan@kostyan-VirtualBox:~$ sudo docker run -it ubuntu --name nginx-php-fpm -p 80:80 nginx-php-fpm:latest
+docker: Error response from daemon: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "--name": executable file not found in $PATH: unknown.

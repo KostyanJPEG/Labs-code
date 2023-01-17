@@ -1,0 +1,924 @@
+kostyan@kostyan-VirtualBox:~$ ps -A
+    PID TTY          TIME CMD
+      1 ?        00:00:05 systemd
+      2 ?        00:00:00 kthreadd
+      3 ?        00:00:00 rcu_gp
+      4 ?        00:00:00 rcu_par_gp
+      5 ?        00:00:00 netns
+      7 ?        00:00:00 kworker/0:0H-events_highpri
+      9 ?        00:00:07 kworker/0:1H-events_highpri
+     10 ?        00:00:00 mm_percpu_wq
+     11 ?        00:00:00 rcu_tasks_rude_
+     12 ?        00:00:00 rcu_tasks_trace
+     13 ?        00:00:02 ksoftirqd/0
+     14 ?        00:00:02 rcu_sched
+     15 ?        00:00:00 migration/0
+     16 ?        00:00:00 idle_inject/0
+     18 ?        00:00:00 cpuhp/0
+     19 ?        00:00:00 kdevtmpfs
+     20 ?        00:00:00 inet_frag_wq
+     21 ?        00:00:00 kauditd
+     22 ?        00:00:00 khungtaskd
+     23 ?        00:00:00 oom_reaper
+     24 ?        00:00:00 writeback
+     25 ?        00:00:05 kcompactd0
+     26 ?        00:00:00 ksmd
+     27 ?        00:00:00 khugepaged
+     73 ?        00:00:00 kintegrityd
+     74 ?        00:00:00 kblockd
+     75 ?        00:00:00 blkcg_punt_bio
+     76 ?        00:00:00 tpm_dev_wq
+     77 ?        00:00:00 ata_sff
+     78 ?        00:00:00 md
+     79 ?        00:00:00 edac-poller
+     80 ?        00:00:00 devfreq_wq
+     81 ?        00:00:00 watchdogd
+     84 ?        00:00:01 kswapd0
+     85 ?        00:00:00 ecryptfs-kthrea
+     87 ?        00:00:00 kthrotld
+     88 ?        00:00:00 acpi_thermal_pm
+     90 ?        00:00:00 scsi_eh_0
+     91 ?        00:00:00 scsi_tmf_0
+     92 ?        00:00:00 scsi_eh_1
+     93 ?        00:00:00 scsi_tmf_1
+     95 ?        00:00:00 vfio-irqfd-clea
+     96 ?        00:00:00 mld
+     97 ?        00:00:00 ipv6_addrconf
+    109 ?        00:00:00 kstrp
+    112 ?        00:00:00 zswap-shrink
+    113 ?        00:00:00 kworker/u3:0
+    118 ?        00:00:00 charger_manager
+    158 ?        00:00:00 scsi_eh_2
+    160 ?        00:00:00 scsi_tmf_2
+    185 ?        00:00:00 jbd2/sda3-8
+    186 ?        00:00:00 ext4-rsv-conver
+    226 ?        00:00:00 systemd-journal
+    258 ?        00:00:00 ipmi-msghandler
+    261 ?        00:00:00 systemd-udevd
+    262 ?        00:00:00 ttm_swap
+    263 ?        00:00:00 irq/18-vmwgfx
+    264 ?        00:00:00 card0-crtc0
+    265 ?        00:00:00 card0-crtc1
+    266 ?        00:00:00 card0-crtc2
+    267 ?        00:00:00 card0-crtc3
+    268 ?        00:00:00 card0-crtc4
+    269 ?        00:00:00 card0-crtc5
+    270 ?        00:00:00 card0-crtc6
+    271 ?        00:00:00 card0-crtc7
+    328 ?        00:00:00 cryptd
+    572 ?        00:00:22 systemd-oomd
+    573 ?        00:00:00 systemd-resolve
+    574 ?        00:00:00 systemd-timesyn
+    616 ?        00:00:01 accounts-daemon
+    617 ?        00:00:00 acpid
+    620 ?        00:00:00 avahi-daemon
+    621 ?        00:00:00 cron
+    622 ?        00:00:02 dbus-daemon
+    623 ?        00:00:02 NetworkManager
+    644 ?        00:00:00 networkd-dispat
+    645 ?        00:00:03 polkitd
+    646 ?        00:00:00 power-profiles-
+    647 ?        00:00:00 rsyslogd
+    648 ?        00:00:02 snapd
+    649 ?        00:00:00 switcheroo-cont
+    653 ?        00:00:00 systemd-logind
+    657 ?        00:00:00 udisksd
+    658 ?        00:00:00 wpa_supplicant
+    662 ?        00:00:00 avahi-daemon
+    717 ?        00:00:00 ModemManager
+    724 ?        00:00:00 cupsd
+    727 ?        00:00:00 unattended-upgr
+    746 ?        00:00:00 gdm3
+    775 ?        00:00:00 cups-browsed
+    788 ?        00:00:00 kerneloops
+    793 ?        00:00:00 kerneloops
+    857 ?        00:00:00 rtkit-daemon
+   1011 ?        00:00:00 upowerd
+   1042 ?        00:00:00 packagekitd
+   1201 ?        00:00:00 colord
+   1271 ?        00:00:00 gdm-session-wor
+   1408 ?        00:00:02 systemd
+   1409 ?        00:00:00 (sd-pam)
+   1415 ?        00:00:00 pipewire
+   1416 ?        00:00:00 pipewire-media-
+   1417 ?        00:00:01 pulseaudio
+   1425 ?        00:00:00 gnome-keyring-d
+   1430 ?        00:00:02 dbus-daemon
+   1435 ?        00:00:00 gvfsd
+   1439 ?        00:00:00 xdg-document-po
+   1441 ?        00:00:00 gvfsd-fuse
+   1445 ?        00:00:00 xdg-permission-
+   1451 ?        00:00:00 fusermount3
+   1471 tty2     00:00:00 gdm-wayland-ses
+   1474 tty2     00:00:00 gnome-session-b
+   1553 ?        00:00:00 gnome-session-c
+   1618 ?        00:00:00 gnome-session-b
+   1651 ?        00:01:49 gnome-shell
+   1652 ?        00:00:00 at-spi-bus-laun
+   1663 ?        00:00:00 dbus-daemon
+   1683 ?        00:00:00 snapd-desktop-i
+   1693 ?        00:00:00 gnome-shell-cal
+   1722 ?        00:00:00 evolution-sourc
+   1732 ?        00:00:00 dconf-service
+   1739 ?        00:00:00 gvfs-udisks2-vo
+   1753 ?        00:00:00 goa-daemon
+   1756 ?        00:00:00 gvfs-mtp-volume
+   1764 ?        00:00:00 gvfs-gphoto2-vo
+   1769 ?        00:00:02 gvfs-afc-volume
+   1779 ?        00:00:00 gvfs-goa-volume
+   1791 ?        00:00:00 evolution-calen
+   1803 ?        00:00:00 goa-identity-se
+   1854 ?        00:00:00 evolution-addre
+   1858 ?        00:00:01 xdg-desktop-por
+   1869 ?        00:00:00 xdg-desktop-por
+   1881 ?        00:00:00 gvfsd-trash
+   1888 ?        00:00:00 at-spi2-registr
+   1892 ?        00:00:00 gjs
+   1899 ?        00:00:00 sh
+   1900 ?        00:00:00 gsd-a11y-settin
+   1903 ?        00:00:01 ibus-daemon
+   1905 ?        00:00:00 gsd-color
+   1908 ?        00:00:00 gsd-datetime
+   1914 ?        00:00:00 gsd-housekeepin
+   1917 ?        00:00:00 gsd-keyboard
+   1921 ?        00:00:00 gsd-media-keys
+   1922 ?        00:00:00 gsd-power
+   1923 ?        00:00:00 gsd-print-notif
+   1926 ?        00:00:00 gsd-rfkill
+   1927 ?        00:00:00 gsd-screensaver
+   1931 ?        00:00:00 gsd-sharing
+   1934 ?        00:00:00 gsd-smartcard
+   1949 ?        00:00:00 gsd-sound
+   1952 ?        00:00:00 gsd-wacom
+   1989 ?        00:00:00 evolution-alarm
+   1990 ?        00:00:00 gsd-disk-utilit
+   2011 ?        00:00:00 gsd-printer
+   2058 ?        00:00:00 ibus-dconf
+   2059 ?        00:00:02 ibus-extension-
+   2064 ?        00:00:00 ibus-portal
+   2089 ?        00:00:00 gvfsd-metadata
+   2129 ?        00:00:00 ibus-engine-sim
+   2134 ?        00:00:00 xdg-desktop-por
+   2145 ?        00:00:05 tracker-miner-f
+   2160 ?        00:00:00 gjs
+   2281 ?        00:00:00 Xwayland
+   2284 ?        00:00:00 gsd-xsettings
+   2309 ?        00:00:00 ibus-x11
+   2382 ?        00:00:01 update-notifier
+   4207 ?        00:00:00 sshd
+   4291 ?        00:00:29 kworker/0:1-events
+   5252 ?        00:00:00 sudo
+   5253 ?        00:00:00 sudo
+   5254 ?        00:00:00 nethogs
+   5447 ?        00:00:00 sudo
+   5448 ?        00:00:00 sudo
+   5449 ?        00:00:00 nethogs
+   6209 ?        00:00:18 kworker/0:0-events
+  27867 ?        00:00:00 sudo
+  27929 ?        00:00:00 sudo
+  27930 ?        00:00:00 nethogs
+  28986 ?        00:00:00 sudo
+  28987 ?        00:00:00 sudo
+  28988 ?        00:00:00 nethogs
+  29100 ?        00:00:00 sudo
+  29101 ?        00:00:00 sudo
+  29102 ?        00:00:00 nethogs
+  29106 ?        00:00:00 sudo
+  29107 ?        00:00:00 sudo
+  29108 ?        00:00:00 nethogs
+  29113 ?        00:00:00 sudo
+  29114 ?        00:00:00 sudo
+  29115 ?        00:00:00 nethogs
+  29142 ?        00:00:00 kworker/u2:2-events_freezable_power_
+  29149 ?        00:00:00 kworker/u2:0-events_freezable_power_
+  29176 ?        00:00:00 gjs
+  29199 ?        00:00:00 kworker/u2:1-events_unbound
+  29219 ?        00:00:00 kworker/0:2-ata_sff
+  29245 ?        00:00:00 sshd
+  29305 ?        00:00:00 sshd
+  29306 pts/9    00:00:00 bash
+  29333 ?        00:00:00 kworker/u2:3-events_freezable_power_
+  29337 pts/9    00:00:00 ps
+kostyan@kostyan-VirtualBox:~$ ps -e
+    PID TTY          TIME CMD
+      1 ?        00:00:05 systemd
+      2 ?        00:00:00 kthreadd
+      3 ?        00:00:00 rcu_gp
+      4 ?        00:00:00 rcu_par_gp
+      5 ?        00:00:00 netns
+      7 ?        00:00:00 kworker/0:0H-events_highpri
+      9 ?        00:00:07 kworker/0:1H-events_highpri
+     10 ?        00:00:00 mm_percpu_wq
+     11 ?        00:00:00 rcu_tasks_rude_
+     12 ?        00:00:00 rcu_tasks_trace
+     13 ?        00:00:02 ksoftirqd/0
+     14 ?        00:00:02 rcu_sched
+     15 ?        00:00:00 migration/0
+     16 ?        00:00:00 idle_inject/0
+     18 ?        00:00:00 cpuhp/0
+     19 ?        00:00:00 kdevtmpfs
+     20 ?        00:00:00 inet_frag_wq
+     21 ?        00:00:00 kauditd
+     22 ?        00:00:00 khungtaskd
+     23 ?        00:00:00 oom_reaper
+     24 ?        00:00:00 writeback
+     25 ?        00:00:05 kcompactd0
+     26 ?        00:00:00 ksmd
+     27 ?        00:00:00 khugepaged
+     73 ?        00:00:00 kintegrityd
+     74 ?        00:00:00 kblockd
+     75 ?        00:00:00 blkcg_punt_bio
+     76 ?        00:00:00 tpm_dev_wq
+     77 ?        00:00:00 ata_sff
+     78 ?        00:00:00 md
+     79 ?        00:00:00 edac-poller
+     80 ?        00:00:00 devfreq_wq
+     81 ?        00:00:00 watchdogd
+     84 ?        00:00:01 kswapd0
+     85 ?        00:00:00 ecryptfs-kthrea
+     87 ?        00:00:00 kthrotld
+     88 ?        00:00:00 acpi_thermal_pm
+     90 ?        00:00:00 scsi_eh_0
+     91 ?        00:00:00 scsi_tmf_0
+     92 ?        00:00:00 scsi_eh_1
+     93 ?        00:00:00 scsi_tmf_1
+     95 ?        00:00:00 vfio-irqfd-clea
+     96 ?        00:00:00 mld
+     97 ?        00:00:00 ipv6_addrconf
+    109 ?        00:00:00 kstrp
+    112 ?        00:00:00 zswap-shrink
+    113 ?        00:00:00 kworker/u3:0
+    118 ?        00:00:00 charger_manager
+    158 ?        00:00:00 scsi_eh_2
+    160 ?        00:00:00 scsi_tmf_2
+    185 ?        00:00:00 jbd2/sda3-8
+    186 ?        00:00:00 ext4-rsv-conver
+    226 ?        00:00:00 systemd-journal
+    258 ?        00:00:00 ipmi-msghandler
+    261 ?        00:00:00 systemd-udevd
+    262 ?        00:00:00 ttm_swap
+    263 ?        00:00:00 irq/18-vmwgfx
+    264 ?        00:00:00 card0-crtc0
+    265 ?        00:00:00 card0-crtc1
+    266 ?        00:00:00 card0-crtc2
+    267 ?        00:00:00 card0-crtc3
+    268 ?        00:00:00 card0-crtc4
+    269 ?        00:00:00 card0-crtc5
+    270 ?        00:00:00 card0-crtc6
+    271 ?        00:00:00 card0-crtc7
+    328 ?        00:00:00 cryptd
+    572 ?        00:00:22 systemd-oomd
+    573 ?        00:00:00 systemd-resolve
+    574 ?        00:00:00 systemd-timesyn
+    616 ?        00:00:01 accounts-daemon
+    617 ?        00:00:00 acpid
+    620 ?        00:00:00 avahi-daemon
+    621 ?        00:00:00 cron
+    622 ?        00:00:02 dbus-daemon
+    623 ?        00:00:02 NetworkManager
+    644 ?        00:00:00 networkd-dispat
+    645 ?        00:00:03 polkitd
+    646 ?        00:00:00 power-profiles-
+    647 ?        00:00:00 rsyslogd
+    648 ?        00:00:02 snapd
+    649 ?        00:00:00 switcheroo-cont
+    653 ?        00:00:00 systemd-logind
+    657 ?        00:00:00 udisksd
+    658 ?        00:00:00 wpa_supplicant
+    662 ?        00:00:00 avahi-daemon
+    717 ?        00:00:00 ModemManager
+    724 ?        00:00:00 cupsd
+    727 ?        00:00:00 unattended-upgr
+    746 ?        00:00:00 gdm3
+    775 ?        00:00:00 cups-browsed
+    788 ?        00:00:00 kerneloops
+    793 ?        00:00:00 kerneloops
+    857 ?        00:00:00 rtkit-daemon
+   1011 ?        00:00:00 upowerd
+   1042 ?        00:00:00 packagekitd
+   1201 ?        00:00:00 colord
+   1271 ?        00:00:00 gdm-session-wor
+   1408 ?        00:00:02 systemd
+   1409 ?        00:00:00 (sd-pam)
+   1415 ?        00:00:00 pipewire
+   1416 ?        00:00:00 pipewire-media-
+   1417 ?        00:00:01 pulseaudio
+   1425 ?        00:00:00 gnome-keyring-d
+   1430 ?        00:00:02 dbus-daemon
+   1435 ?        00:00:00 gvfsd
+   1439 ?        00:00:00 xdg-document-po
+   1441 ?        00:00:00 gvfsd-fuse
+   1445 ?        00:00:00 xdg-permission-
+   1451 ?        00:00:00 fusermount3
+   1471 tty2     00:00:00 gdm-wayland-ses
+   1474 tty2     00:00:00 gnome-session-b
+   1553 ?        00:00:00 gnome-session-c
+   1618 ?        00:00:00 gnome-session-b
+   1651 ?        00:01:49 gnome-shell
+   1652 ?        00:00:00 at-spi-bus-laun
+   1663 ?        00:00:00 dbus-daemon
+   1683 ?        00:00:00 snapd-desktop-i
+   1693 ?        00:00:00 gnome-shell-cal
+   1722 ?        00:00:00 evolution-sourc
+   1732 ?        00:00:00 dconf-service
+   1739 ?        00:00:00 gvfs-udisks2-vo
+   1753 ?        00:00:00 goa-daemon
+   1756 ?        00:00:00 gvfs-mtp-volume
+   1764 ?        00:00:00 gvfs-gphoto2-vo
+   1769 ?        00:00:02 gvfs-afc-volume
+   1779 ?        00:00:00 gvfs-goa-volume
+   1791 ?        00:00:00 evolution-calen
+   1803 ?        00:00:00 goa-identity-se
+   1854 ?        00:00:00 evolution-addre
+   1858 ?        00:00:01 xdg-desktop-por
+   1869 ?        00:00:00 xdg-desktop-por
+   1881 ?        00:00:00 gvfsd-trash
+   1888 ?        00:00:00 at-spi2-registr
+   1892 ?        00:00:00 gjs
+   1899 ?        00:00:00 sh
+   1900 ?        00:00:00 gsd-a11y-settin
+   1903 ?        00:00:01 ibus-daemon
+   1905 ?        00:00:00 gsd-color
+   1908 ?        00:00:00 gsd-datetime
+   1914 ?        00:00:00 gsd-housekeepin
+   1917 ?        00:00:00 gsd-keyboard
+   1921 ?        00:00:00 gsd-media-keys
+   1922 ?        00:00:00 gsd-power
+   1923 ?        00:00:00 gsd-print-notif
+   1926 ?        00:00:00 gsd-rfkill
+   1927 ?        00:00:00 gsd-screensaver
+   1931 ?        00:00:00 gsd-sharing
+   1934 ?        00:00:00 gsd-smartcard
+   1949 ?        00:00:00 gsd-sound
+   1952 ?        00:00:00 gsd-wacom
+   1989 ?        00:00:00 evolution-alarm
+   1990 ?        00:00:00 gsd-disk-utilit
+   2011 ?        00:00:00 gsd-printer
+   2058 ?        00:00:00 ibus-dconf
+   2059 ?        00:00:02 ibus-extension-
+   2064 ?        00:00:00 ibus-portal
+   2089 ?        00:00:00 gvfsd-metadata
+   2129 ?        00:00:00 ibus-engine-sim
+   2134 ?        00:00:00 xdg-desktop-por
+   2145 ?        00:00:05 tracker-miner-f
+   2160 ?        00:00:00 gjs
+   2281 ?        00:00:00 Xwayland
+   2284 ?        00:00:00 gsd-xsettings
+   2309 ?        00:00:00 ibus-x11
+   2382 ?        00:00:01 update-notifier
+   4207 ?        00:00:00 sshd
+   4291 ?        00:00:29 kworker/0:1-events
+   5252 ?        00:00:00 sudo
+   5253 ?        00:00:00 sudo
+   5254 ?        00:00:00 nethogs
+   5447 ?        00:00:00 sudo
+   5448 ?        00:00:00 sudo
+   5449 ?        00:00:00 nethogs
+   6209 ?        00:00:18 kworker/0:0-events
+  27867 ?        00:00:00 sudo
+  27929 ?        00:00:00 sudo
+  27930 ?        00:00:00 nethogs
+  28986 ?        00:00:00 sudo
+  28987 ?        00:00:00 sudo
+  28988 ?        00:00:00 nethogs
+  29100 ?        00:00:00 sudo
+  29101 ?        00:00:00 sudo
+  29102 ?        00:00:00 nethogs
+  29106 ?        00:00:00 sudo
+  29107 ?        00:00:00 sudo
+  29108 ?        00:00:00 nethogs
+  29113 ?        00:00:00 sudo
+  29114 ?        00:00:00 sudo
+  29115 ?        00:00:00 nethogs
+  29142 ?        00:00:00 kworker/u2:2-events_freezable_power_
+  29149 ?        00:00:00 kworker/u2:0-events_freezable_power_
+  29176 ?        00:00:00 gjs
+  29199 ?        00:00:00 kworker/u2:1-events_freezable_power_
+  29219 ?        00:00:00 kworker/0:2-ata_sff
+  29245 ?        00:00:00 sshd
+  29305 ?        00:00:00 sshd
+  29306 pts/9    00:00:00 bash
+  29333 ?        00:00:00 kworker/u2:3-events_unbound
+  29338 pts/9    00:00:00 ps
+kostyan@kostyan-VirtualBox:~$ ps r
+    PID TTY      STAT   TIME COMMAND
+  29339 pts/9    R+     0:00 ps r
+kostyan@kostyan-VirtualBox:~$ ps U kostyan
+    PID TTY      STAT   TIME COMMAND
+   1408 ?        Ss     0:02 /lib/systemd/systemd --user
+   1409 ?        S      0:00 (sd-pam)
+   1415 ?        S<sl   0:00 /usr/bin/pipewire
+   1416 ?        Ssl    0:00 /usr/bin/pipewire-media-session
+   1417 ?        S<sl   0:01 /usr/bin/pulseaudio --daemonize=no --log-target=jou
+   1425 ?        Sl     0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+   1430 ?        Ss     0:02 /usr/bin/dbus-daemon --session --address=systemd: -
+   1435 ?        Ssl    0:00 /usr/libexec/gvfsd
+   1439 ?        Ssl    0:00 /usr/libexec/xdg-document-portal
+   1441 ?        Sl     0:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+   1445 ?        Ssl    0:00 /usr/libexec/xdg-permission-store
+   1471 tty2     Ssl+   0:00 /usr/libexec/gdm-wayland-session env GNOME_SHELL_SE
+   1474 tty2     Sl+    0:00 /usr/libexec/gnome-session-binary --session=ubuntu
+   1553 ?        Ssl    0:00 /usr/libexec/gnome-session-ctl --monitor
+   1618 ?        Ssl    0:00 /usr/libexec/gnome-session-binary --systemd-service
+   1651 ?        Ssl    1:49 /usr/bin/gnome-shell
+   1652 ?        Sl     0:00 /usr/libexec/at-spi-bus-launcher --launch-immediate
+   1663 ?        S      0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defau
+   1683 ?        Ssl    0:00 /snap/snapd-desktop-integration/14/bin/snapd-deskto
+   1693 ?        Sl     0:00 /usr/libexec/gnome-shell-calendar-server
+   1722 ?        Ssl    0:00 /usr/libexec/evolution-source-registry
+   1732 ?        Ssl    0:00 /usr/libexec/dconf-service
+   1739 ?        Ssl    0:00 /usr/libexec/gvfs-udisks2-volume-monitor
+   1753 ?        Sl     0:00 /usr/libexec/goa-daemon
+   1756 ?        Ssl    0:00 /usr/libexec/gvfs-mtp-volume-monitor
+   1764 ?        Ssl    0:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+   1769 ?        Ssl    0:02 /usr/libexec/gvfs-afc-volume-monitor
+   1779 ?        Ssl    0:00 /usr/libexec/gvfs-goa-volume-monitor
+   1791 ?        Ssl    0:00 /usr/libexec/evolution-calendar-factory
+   1803 ?        Sl     0:00 /usr/libexec/goa-identity-service
+   1854 ?        Ssl    0:00 /usr/libexec/evolution-addressbook-factory
+   1858 ?        Ssl    0:01 /usr/libexec/xdg-desktop-portal
+   1869 ?        Ssl    0:00 /usr/libexec/xdg-desktop-portal-gnome
+   1881 ?        Sl     0:00 /usr/libexec/gvfsd-trash --spawner :1.2 /org/gtk/gv
+   1888 ?        Sl     0:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+   1892 ?        Sl     0:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shell
+   1899 ?        Ss     0:00 sh -c /usr/bin/ibus-daemon --panel disable $([ "$XD
+   1900 ?        Ssl    0:00 /usr/libexec/gsd-a11y-settings
+   1903 ?        Sl     0:01 /usr/bin/ibus-daemon --panel disable
+   1905 ?        Ssl    0:00 /usr/libexec/gsd-color
+   1908 ?        Ssl    0:00 /usr/libexec/gsd-datetime
+   1914 ?        Ssl    0:00 /usr/libexec/gsd-housekeeping
+   1917 ?        Ssl    0:00 /usr/libexec/gsd-keyboard
+   1921 ?        Ssl    0:00 /usr/libexec/gsd-media-keys
+   1922 ?        Ssl    0:00 /usr/libexec/gsd-power
+   1923 ?        Ssl    0:00 /usr/libexec/gsd-print-notifications
+   1926 ?        Ssl    0:00 /usr/libexec/gsd-rfkill
+   1927 ?        Ssl    0:00 /usr/libexec/gsd-screensaver-proxy
+   1931 ?        Ssl    0:00 /usr/libexec/gsd-sharing
+   1934 ?        Ssl    0:00 /usr/libexec/gsd-smartcard
+   1949 ?        Ssl    0:00 /usr/libexec/gsd-sound
+   1952 ?        Ssl    0:00 /usr/libexec/gsd-wacom
+   1989 ?        Sl     0:00 /usr/libexec/evolution-data-server/evolution-alarm-
+   1990 ?        Sl     0:00 /usr/libexec/gsd-disk-utility-notify
+   2011 ?        Sl     0:00 /usr/libexec/gsd-printer
+   2058 ?        Sl     0:00 /usr/libexec/ibus-dconf
+   2059 ?        Sl     0:02 /usr/libexec/ibus-extension-gtk3
+   2064 ?        Sl     0:00 /usr/libexec/ibus-portal
+   2089 ?        Ssl    0:00 /usr/libexec/gvfsd-metadata
+   2129 ?        Sl     0:00 /usr/libexec/ibus-engine-simple
+   2134 ?        Ssl    0:00 /usr/libexec/xdg-desktop-portal-gtk
+   2145 ?        SNsl   0:05 /usr/libexec/tracker-miner-fs-3
+   2160 ?        Sl     0:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Scree
+   2281 ?        S      0:00 /usr/bin/Xwayland :0 -rootless -noreset -accessx -c
+   2284 ?        Ssl    0:00 /usr/libexec/gsd-xsettings
+   2309 ?        Sl     0:00 /usr/libexec/ibus-x11
+   2382 ?        Sl     0:01 update-notifier
+  29176 ?        Sl     0:00 gjs /usr/share/gnome-shell/extensions/ding@rasterso
+  29305 ?        S      0:00 sshd: kostyan@pts/9
+  29306 pts/9    Ss     0:00 -bash
+  29340 pts/9    R+     0:00 ps U kostyan
+kostyan@kostyan-VirtualBox:~$ pstree
+systemd─┬─ModemManager───2*[{ModemManager}]
+        ├─NetworkManager───2*[{NetworkManager}]
+        ├─accounts-daemon───2*[{accounts-daemon}]
+        ├─acpid
+        ├─avahi-daemon───avahi-daemon
+        ├─colord───2*[{colord}]
+        ├─cron
+        ├─cups-browsed───2*[{cups-browsed}]
+        ├─cupsd
+        ├─dbus-daemon
+        ├─gdm3─┬─gdm-session-wor─┬─gdm-wayland-ses─┬─gnome-session-b───2*[{gnom+
+        │      │                 │                 └─2*[{gdm-wayland-ses}]
+        │      │                 └─2*[{gdm-session-wor}]
+        │      └─2*[{gdm3}]
+        ├─gnome-keyring-d───3*[{gnome-keyring-d}]
+        ├─2*[kerneloops]
+        ├─networkd-dispat
+        ├─packagekitd───2*[{packagekitd}]
+        ├─polkitd───2*[{polkitd}]
+        ├─power-profiles-───2*[{power-profiles-}]
+        ├─rsyslogd───3*[{rsyslogd}]
+        ├─rtkit-daemon───2*[{rtkit-daemon}]
+        ├─snapd───9*[{snapd}]
+        ├─sshd───sshd───sshd───bash───pstree
+        ├─switcheroo-cont───2*[{switcheroo-cont}]
+        ├─systemd─┬─(sd-pam)
+        │         ├─at-spi2-registr───2*[{at-spi2-registr}]
+        │         ├─dbus-daemon
+        │         ├─dconf-service───2*[{dconf-service}]
+        │         ├─evolution-addre───5*[{evolution-addre}]
+        │         ├─evolution-calen───8*[{evolution-calen}]
+        │         ├─evolution-sourc───3*[{evolution-sourc}]
+        │         ├─2*[gjs───4*[{gjs}]]
+        │         ├─gnome-session-b─┬─at-spi-bus-laun─┬─dbus-daemon
+        │         │                 │                 └─3*[{at-spi-bus-laun}]
+        │         │                 ├─evolution-alarm───5*[{evolution-alarm}]
+        │         │                 ├─gsd-disk-utilit───2*[{gsd-disk-utilit}]
+        │         │                 ├─update-notifier───3*[{update-notifier}]
+        │         │                 └─3*[{gnome-session-b}]
+        │         ├─gnome-session-c───{gnome-session-c}
+        │         ├─gnome-shell─┬─Xwayland
+        │         │             ├─gjs───5*[{gjs}]
+        │         │             └─9*[{gnome-shell}]
+        │         ├─gnome-shell-cal───5*[{gnome-shell-cal}]
+        │         ├─goa-daemon───3*[{goa-daemon}]
+        │         ├─goa-identity-se───2*[{goa-identity-se}]
+        │         ├─gsd-a11y-settin───3*[{gsd-a11y-settin}]
+        │         ├─gsd-color───3*[{gsd-color}]
+        │         ├─gsd-datetime───3*[{gsd-datetime}]
+        │         ├─gsd-housekeepin───3*[{gsd-housekeepin}]
+        │         ├─gsd-keyboard───3*[{gsd-keyboard}]
+        │         ├─gsd-media-keys───3*[{gsd-media-keys}]
+        │         ├─gsd-power───3*[{gsd-power}]
+        │         ├─gsd-print-notif───2*[{gsd-print-notif}]
+        │         ├─gsd-printer───2*[{gsd-printer}]
+        │         ├─gsd-rfkill───2*[{gsd-rfkill}]
+        │         ├─gsd-screensaver───2*[{gsd-screensaver}]
+        │         ├─gsd-sharing───3*[{gsd-sharing}]
+        │         ├─gsd-smartcard───3*[{gsd-smartcard}]
+        │         ├─gsd-sound───3*[{gsd-sound}]
+        │         ├─gsd-wacom───3*[{gsd-wacom}]
+        │         ├─gsd-xsettings───3*[{gsd-xsettings}]
+        │         ├─gvfs-afc-volume───3*[{gvfs-afc-volume}]
+        │         ├─gvfs-goa-volume───2*[{gvfs-goa-volume}]
+        │         ├─gvfs-gphoto2-vo───2*[{gvfs-gphoto2-vo}]
+        │         ├─gvfs-mtp-volume───2*[{gvfs-mtp-volume}]
+        │         ├─gvfs-udisks2-vo───3*[{gvfs-udisks2-vo}]
+        │         ├─gvfsd─┬─gvfsd-trash───2*[{gvfsd-trash}]
+        │         │       └─2*[{gvfsd}]
+        │         ├─gvfsd-fuse───5*[{gvfsd-fuse}]
+        │         ├─gvfsd-metadata───2*[{gvfsd-metadata}]
+        │         ├─ibus-portal───2*[{ibus-portal}]
+        │         ├─ibus-x11───2*[{ibus-x11}]
+        │         ├─pipewire───{pipewire}
+        │         ├─pipewire-media-───{pipewire-media-}
+        │         ├─pulseaudio───3*[{pulseaudio}]
+        │         ├─sh───ibus-daemon─┬─ibus-dconf───3*[{ibus-dconf}]
+        │         │                  ├─ibus-engine-sim───2*[{ibus-engine-sim}]
+        │         │                  ├─ibus-extension-───3*[{ibus-extension-}]
+        │         │                  └─2*[{ibus-daemon}]
+        │         ├─snapd-desktop-i───3*[{snapd-desktop-i}]
+        │         ├─7*[sudo───sudo───nethogs]
+        │         ├─tracker-miner-f───5*[{tracker-miner-f}]
+        │         ├─xdg-desktop-por───5*[{xdg-desktop-por}]
+        │         ├─2*[xdg-desktop-por───3*[{xdg-desktop-por}]]
+        │         ├─xdg-document-po─┬─fusermount3
+        │         │                 └─5*[{xdg-document-po}]
+        │         └─xdg-permission-───2*[{xdg-permission-}]
+        ├─systemd-journal
+        ├─systemd-logind
+        ├─systemd-oomd
+        ├─systemd-resolve
+        ├─systemd-timesyn───{systemd-timesyn}
+        ├─systemd-udevd
+        ├─udisksd───4*[{udisksd}]
+        ├─unattended-upgr───{unattended-upgr}
+        ├─upowerd───2*[{upowerd}]
+        └─wpa_supplicant
+kostyan@kostyan-VirtualBox:~$ pstree -N
+pstree: option requires an argument -- 'N'
+Usage: pstree [-acglpsStTuZ] [ -h | -H PID ] [ -n | -N type ]
+              [ -A | -G | -U ] [ PID | USER ]
+   or: pstree -V
+
+Display a tree of processes.
+
+  -a, --arguments     show command line arguments
+  -A, --ascii         use ASCII line drawing characters
+  -c, --compact-not   don't compact identical subtrees
+  -C, --color=TYPE    color process by attribute
+                      (age)
+  -g, --show-pgids    show process group ids; implies -c
+  -G, --vt100         use VT100 line drawing characters
+  -h, --highlight-all highlight current process and its ancestors
+  -H PID, --highlight-pid=PID
+                      highlight this process and its ancestors
+  -l, --long          don't truncate long lines
+  -n, --numeric-sort  sort output by PID
+  -N TYPE, --ns-sort=TYPE
+                      sort output by this namespace type
+                              (cgroup, ipc, mnt, net, pid, time, user, uts)
+  -p, --show-pids     show PIDs; implies -c
+  -s, --show-parents  show parents of the selected process
+  -S, --ns-changes    show namespace transitions
+  -t, --thread-names  show full thread names
+  -T, --hide-threads  hide threads, show only processes
+  -u, --uid-changes   show uid transitions
+  -U, --unicode       use UTF-8 (Unicode) line drawing characters
+  -V, --version       display version information
+  -Z, --security-context
+                      show security attributes
+
+  PID    start at this PID; default is 1 (init)
+  USER   show only trees rooted at processes of this user
+
+kostyan@kostyan-VirtualBox:~$ pstree -a
+systemd splash
+  ├─ModemManager
+  │   └─2*[{ModemManager}]
+  ├─NetworkManager --no-daemon
+  │   └─2*[{NetworkManager}]
+  ├─accounts-daemon
+  │   └─2*[{accounts-daemon}]
+  ├─acpid
+  ├─avahi-daemon
+  │   └─avahi-daemon
+  ├─colord
+  │   └─2*[{colord}]
+  ├─cron -f -P
+  ├─cups-browsed
+  │   └─2*[{cups-browsed}]
+  ├─cupsd -l
+  ├─dbus-daemon --system --address=systemd: --nofork --nopidfile...
+  ├─gdm3
+  │   ├─gdm-session-wor
+  │   │   ├─gdm-wayland-sesenv GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gn
+  │   │   │   ├─gnome-session-b --session=ubuntu
+  │   │   │   │   └─2*[{gnome-session-b}]
+  │   │   │   └─2*[{gdm-wayland-ses}]
+  │   │   └─2*[{gdm-session-wor}]
+  │   └─2*[{gdm3}]
+  ├─gnome-keyring-d --daemonize --login
+  │   └─3*[{gnome-keyring-d}]
+  ├─kerneloops --test
+  ├─kerneloops
+  ├─networkd-dispat /usr/bin/networkd-dispatcher --run-startup-triggers
+  ├─packagekitd
+  │   └─2*[{packagekitd}]
+  ├─polkitd --no-debug
+  │   └─2*[{polkitd}]
+  ├─power-profiles-
+  │   └─2*[{power-profiles-}]
+  ├─rsyslogd -n -iNONE
+  │   └─3*[{rsyslogd}]
+  ├─rtkit-daemon
+  │   └─2*[{rtkit-daemon}]
+  ├─snapd
+  │   └─9*[{snapd}]
+  ├─sshd
+  │   └─sshd
+  │       └─sshd
+  │           └─bash
+  │               └─pstree -a
+  ├─switcheroo-cont
+  │   └─2*[{switcheroo-cont}]
+  ├─systemd --user
+  │   ├─(sd-pam)
+  │   ├─at-spi2-registr --use-gnome-session
+  │   │   └─2*[{at-spi2-registr}]
+  │   ├─dbus-daemon --session --address=systemd: --nofork --nopidfile--systemd
+  │   ├─dconf-service
+  │   │   └─2*[{dconf-service}]
+  │   ├─evolution-addre
+  │   │   └─5*[{evolution-addre}]
+  │   ├─evolution-calen
+  │   │   └─8*[{evolution-calen}]
+  │   ├─evolution-sourc
+  │   │   └─3*[{evolution-sourc}]
+  │   ├─gjs /usr/share/gnome-shell/org.gnome.Shell.Notifications
+  │   │   └─4*[{gjs}]
+  │   ├─gjs /usr/share/gnome-shell/org.gnome.ScreenSaver
+  │   │   └─4*[{gjs}]
+  │   ├─gnome-session-b --systemd-service --session=ubuntu
+  │   │   ├─at-spi-bus-laun --launch-immediately
+  │   │   │   ├─dbus-daemon...
+  │   │   │   └─3*[{at-spi-bus-laun}]
+  │   │   ├─evolution-alarm
+  │   │   │   └─5*[{evolution-alarm}]
+  │   │   ├─gsd-disk-utilit
+  │   │   │   └─2*[{gsd-disk-utilit}]
+  │   │   ├─update-notifier
+  │   │   │   └─3*[{update-notifier}]
+  │   │   └─3*[{gnome-session-b}]
+  │   ├─gnome-session-c --monitor
+  │   │   └─{gnome-session-c}
+  │   ├─gnome-shell
+  │   │   ├─Xwayland :0 -rootless -noreset -accessx -core -auth...
+  │   │   ├─gjs ...
+  │   │   │   └─5*[{gjs}]
+  │   │   └─9*[{gnome-shell}]
+  │   ├─gnome-shell-cal
+  │   │   └─5*[{gnome-shell-cal}]
+  │   ├─goa-daemon
+  │   │   └─3*[{goa-daemon}]
+  │   ├─goa-identity-se
+  │   │   └─2*[{goa-identity-se}]
+  │   ├─gsd-a11y-settin
+  │   │   └─3*[{gsd-a11y-settin}]
+  │   ├─gsd-color
+  │   │   └─3*[{gsd-color}]
+  │   ├─gsd-datetime
+  │   │   └─3*[{gsd-datetime}]
+  │   ├─gsd-housekeepin
+  │   │   └─3*[{gsd-housekeepin}]
+  │   ├─gsd-keyboard
+  │   │   └─3*[{gsd-keyboard}]
+  │   ├─gsd-media-keys
+  │   │   └─3*[{gsd-media-keys}]
+  │   ├─gsd-power
+  │   │   └─3*[{gsd-power}]
+  │   ├─gsd-print-notif
+  │   │   └─2*[{gsd-print-notif}]
+  │   ├─gsd-printer
+  │   │   └─2*[{gsd-printer}]
+  │   ├─gsd-rfkill
+  │   │   └─2*[{gsd-rfkill}]
+  │   ├─gsd-screensaver
+  │   │   └─2*[{gsd-screensaver}]
+  │   ├─gsd-sharing
+  │   │   └─3*[{gsd-sharing}]
+  │   ├─gsd-smartcard
+  │   │   └─3*[{gsd-smartcard}]
+  │   ├─gsd-sound
+  │   │   └─3*[{gsd-sound}]
+  │   ├─gsd-wacom
+  │   │   └─3*[{gsd-wacom}]
+  │   ├─gsd-xsettings
+  │   │   └─3*[{gsd-xsettings}]
+  │   ├─gvfs-afc-volume
+  │   │   └─3*[{gvfs-afc-volume}]
+  │   ├─gvfs-goa-volume
+  │   │   └─2*[{gvfs-goa-volume}]
+  │   ├─gvfs-gphoto2-vo
+  │   │   └─2*[{gvfs-gphoto2-vo}]
+  │   ├─gvfs-mtp-volume
+  │   │   └─2*[{gvfs-mtp-volume}]
+  │   ├─gvfs-udisks2-vo
+  │   │   └─3*[{gvfs-udisks2-vo}]
+  │   ├─gvfsd
+  │   │   ├─gvfsd-trash --spawner :1.2 /org/gtk/gvfs/exec_spaw/0
+  │   │   │   └─2*[{gvfsd-trash}]
+  │   │   └─2*[{gvfsd}]
+  │   ├─gvfsd-fuse /run/user/1000/gvfs -f
+  │   │   └─5*[{gvfsd-fuse}]
+  │   ├─gvfsd-metadata
+  │   │   └─2*[{gvfsd-metadata}]
+  │   ├─ibus-portal
+  │   │   └─2*[{ibus-portal}]
+  │   ├─ibus-x11
+  │   │   └─2*[{ibus-x11}]
+  │   ├─pipewire
+  │   │   └─{pipewire}
+  │   ├─pipewire-media-
+  │   │   └─{pipewire-media-}
+  │   ├─pulseaudio --daemonize=no --log-target=journal
+  │   │   └─3*[{pulseaudio}]
+  │   ├─sh -c...
+  │   │   └─ibus-daemon --panel disable
+  │   │       ├─ibus-dconf
+  │   │       │   └─3*[{ibus-dconf}]
+  │   │       ├─ibus-engine-sim
+  │   │       │   └─2*[{ibus-engine-sim}]
+  │   │       ├─ibus-extension-
+  │   │       │   └─3*[{ibus-extension-}]
+  │   │       └─2*[{ibus-daemon}]
+  │   ├─snapd-desktop-i
+  │   │   └─3*[{snapd-desktop-i}]
+  │   ├─sudo nethogs
+  │   │   └─sudo nethogs
+  │   │       └─nethogs
+  │   ├─sudo nethogs
+  │   │   └─sudo nethogs
+  │   │       └─nethogs
+  │   ├─sudo nethogs
+  │   │   └─sudo nethogs
+  │   │       └─nethogs
+  │   ├─sudo nethogs
+  │   │   └─sudo nethogs
+  │   │       └─nethogs
+  │   ├─sudo nethogs
+  │   │   └─sudo nethogs
+  │   │       └─nethogs
+  │   ├─sudo nethogs -t
+  │   │   └─sudo nethogs -t
+  │   │       └─nethogs -t
+  │   ├─sudo nethogs -d 3 -t
+  │   │   └─sudo nethogs -d 3 -t
+  │   │       └─nethogs -d 3 -t
+  │   ├─tracker-miner-f
+  │   │   └─5*[{tracker-miner-f}]
+  │   ├─xdg-desktop-por
+  │   │   └─5*[{xdg-desktop-por}]
+  │   ├─xdg-desktop-por
+  │   │   └─3*[{xdg-desktop-por}]
+  │   ├─xdg-desktop-por
+  │   │   └─3*[{xdg-desktop-por}]
+  │   ├─xdg-document-po
+  │   │   ├─fusermount3 -o ...
+  │   │   └─5*[{xdg-document-po}]
+  │   └─xdg-permission-
+  │       └─2*[{xdg-permission-}]
+  ├─systemd-journal
+  ├─systemd-logind
+  ├─systemd-oomd
+  ├─systemd-resolve
+  ├─systemd-timesyn
+  │   └─{systemd-timesyn}
+  ├─systemd-udevd
+  ├─udisksd
+  │   └─4*[{udisksd}]
+  ├─unattended-upgr ...
+  │   └─{unattended-upgr}
+  ├─upowerd
+  │   └─2*[{upowerd}]
+  └─wpa_supplicant -u -s -O /run/wpa_supplicant
+kostyan@kostyan-VirtualBox:~$ pstree -h
+systemd─┬─ModemManager───2*[{ModemManager}]
+        ├─NetworkManager───2*[{NetworkManager}]
+        ├─accounts-daemon───2*[{accounts-daemon}]
+        ├─acpid
+        ├─avahi-daemon───avahi-daemon
+        ├─colord───2*[{colord}]
+        ├─cron
+        ├─cups-browsed───2*[{cups-browsed}]
+        ├─cupsd
+        ├─dbus-daemon
+        ├─gdm3─┬─gdm-session-wor─┬─gdm-wayland-ses─┬─gnome-session-b───2*[{gnom+
+        │      │                 │                 └─2*[{gdm-wayland-ses}]
+        │      │                 └─2*[{gdm-session-wor}]
+        │      └─2*[{gdm3}]
+        ├─gnome-keyring-d───3*[{gnome-keyring-d}]
+        ├─2*[kerneloops]
+        ├─networkd-dispat
+        ├─packagekitd───2*[{packagekitd}]
+        ├─polkitd───2*[{polkitd}]
+        ├─power-profiles-───2*[{power-profiles-}]
+        ├─rsyslogd───3*[{rsyslogd}]
+        ├─rtkit-daemon───2*[{rtkit-daemon}]
+        ├─snapd───9*[{snapd}]
+        ├─sshd───sshd───sshd───bash───pstree
+        ├─switcheroo-cont───2*[{switcheroo-cont}]
+        ├─systemd─┬─(sd-pam)
+        │         ├─at-spi2-registr───2*[{at-spi2-registr}]
+        │         ├─dbus-daemon
+        │         ├─dconf-service───2*[{dconf-service}]
+        │         ├─evolution-addre───5*[{evolution-addre}]
+        │         ├─evolution-calen───8*[{evolution-calen}]
+        │         ├─evolution-sourc───3*[{evolution-sourc}]
+        │         ├─2*[gjs───4*[{gjs}]]
+        │         ├─gnome-session-b─┬─at-spi-bus-laun─┬─dbus-daemon
+        │         │                 │                 └─3*[{at-spi-bus-laun}]
+        │         │                 ├─evolution-alarm───5*[{evolution-alarm}]
+        │         │                 ├─gsd-disk-utilit───2*[{gsd-disk-utilit}]
+        │         │                 ├─update-notifier───3*[{update-notifier}]
+        │         │                 └─3*[{gnome-session-b}]
+        │         ├─gnome-session-c───{gnome-session-c}
+        │         ├─gnome-shell─┬─Xwayland
+        │         │             ├─gjs───5*[{gjs}]
+        │         │             └─9*[{gnome-shell}]
+        │         ├─gnome-shell-cal───5*[{gnome-shell-cal}]
+        │         ├─goa-daemon───3*[{goa-daemon}]
+        │         ├─goa-identity-se───2*[{goa-identity-se}]
+        │         ├─gsd-a11y-settin───3*[{gsd-a11y-settin}]
+        │         ├─gsd-color───3*[{gsd-color}]
+        │         ├─gsd-datetime───3*[{gsd-datetime}]
+        │         ├─gsd-housekeepin───3*[{gsd-housekeepin}]
+        │         ├─gsd-keyboard───3*[{gsd-keyboard}]
+        │         ├─gsd-media-keys───3*[{gsd-media-keys}]
+        │         ├─gsd-power───3*[{gsd-power}]
+        │         ├─gsd-print-notif───2*[{gsd-print-notif}]
+        │         ├─gsd-printer───2*[{gsd-printer}]
+        │         ├─gsd-rfkill───2*[{gsd-rfkill}]
+        │         ├─gsd-screensaver───2*[{gsd-screensaver}]
+        │         ├─gsd-sharing───3*[{gsd-sharing}]
+        │         ├─gsd-smartcard───3*[{gsd-smartcard}]
+        │         ├─gsd-sound───3*[{gsd-sound}]
+        │         ├─gsd-wacom───3*[{gsd-wacom}]
+        │         ├─gsd-xsettings───3*[{gsd-xsettings}]
+        │         ├─gvfs-afc-volume───3*[{gvfs-afc-volume}]
+        │         ├─gvfs-goa-volume───2*[{gvfs-goa-volume}]
+        │         ├─gvfs-gphoto2-vo───2*[{gvfs-gphoto2-vo}]
+        │         ├─gvfs-mtp-volume───2*[{gvfs-mtp-volume}]
+        │         ├─gvfs-udisks2-vo───3*[{gvfs-udisks2-vo}]
+        │         ├─gvfsd─┬─gvfsd-trash───2*[{gvfsd-trash}]
+        │         │       └─2*[{gvfsd}]
+        │         ├─gvfsd-fuse───5*[{gvfsd-fuse}]
+        │         ├─gvfsd-metadata───2*[{gvfsd-metadata}]
+        │         ├─ibus-portal───2*[{ibus-portal}]
+        │         ├─ibus-x11───2*[{ibus-x11}]
+        │         ├─pipewire───{pipewire}
+        │         ├─pipewire-media-───{pipewire-media-}
+        │         ├─pulseaudio───3*[{pulseaudio}]
+        │         ├─sh───ibus-daemon─┬─ibus-dconf───3*[{ibus-dconf}]
+        │         │                  ├─ibus-engine-sim───2*[{ibus-engine-sim}]
+        │         │                  ├─ibus-extension-───3*[{ibus-extension-}]
+        │         │                  └─2*[{ibus-daemon}]
+        │         ├─snapd-desktop-i───3*[{snapd-desktop-i}]
+        │         ├─7*[sudo───sudo───nethogs]
+        │         ├─tracker-miner-f───5*[{tracker-miner-f}]
+        │         ├─xdg-desktop-por───5*[{xdg-desktop-por}]
+        │         ├─2*[xdg-desktop-por───3*[{xdg-desktop-por}]]
+        │         ├─xdg-document-po─┬─fusermount3
+        │         │                 └─5*[{xdg-document-po}]
+        │         └─xdg-permission-───2*[{xdg-permission-}]
+        ├─systemd-journal
+        ├─systemd-logind
+        ├─systemd-oomd
+        ├─systemd-resolve
+        ├─systemd-timesyn───{systemd-timesyn}
+        ├─systemd-udevd
+        ├─udisksd───4*[{udisksd}]
+        ├─unattended-upgr───{unattended-upgr}
+        ├─upowerd───2*[{upowerd}]
+        └─wpa_supplicant
+kostyan@kostyan-VirtualBox:~$

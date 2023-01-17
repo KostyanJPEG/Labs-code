@@ -1,0 +1,41 @@
+kostyan@kostyan-VirtualBox:~$ sudo groupadd developer
+[sudo] password for kostyan:
+kostyan@kostyan-VirtualBox:~$ sudo useradd -m -G developer -s /bin/bash dev_1
+kostyan@kostyan-VirtualBox:~$ sudo useradd -m -G developer -s /bin/bash dev_2
+kostyan@kostyan-VirtualBox:~$ mkdir developer
+kostyan@kostyan-VirtualBox:~$ sudo chgrp developer ~/developer
+kostyan@kostyan-VirtualBox:~$ chmod 775 ~/developer
+kostyan@kostyan-VirtualBox:~$ sudo chmod g+s ~/developer
+kostyan@kostyan-VirtualBox:~$ ls -la
+total 76
+drwxr-x--- 15 kostyan kostyan   4096 ноя 21 01:58 .
+drwxr-xr-x  5 root    root      4096 ноя 21 01:58 ..
+-rw-------  1 kostyan kostyan    624 ноя 21 01:09 .bash_history
+-rw-r--r--  1 kostyan kostyan    220 ноя 21 00:16 .bash_logout
+-rw-r--r--  1 kostyan kostyan   3771 ноя 21 00:16 .bashrc
+drwx------ 10 kostyan kostyan   4096 ноя 21 00:39 .cache
+drwx------ 10 kostyan kostyan   4096 ноя 21 00:32 .config
+drwxr-xr-x  2 kostyan kostyan   4096 ноя 21 00:31 Desktop
+drwxrwsr-x  2 kostyan developer 4096 ноя 21 01:58 developer
+drwxr-xr-x  2 kostyan kostyan   4096 ноя 21 00:31 Documents
+drwxr-xr-x  2 kostyan kostyan   4096 ноя 21 00:31 Downloads
+drwx------  3 kostyan kostyan   4096 ноя 21 00:31 .local
+drwxr-xr-x  2 kostyan kostyan   4096 ноя 21 00:31 Music
+drwxr-xr-x  2 kostyan kostyan   4096 ноя 21 00:31 Pictures
+-rw-r--r--  1 kostyan kostyan    807 ноя 21 00:16 .profile
+drwxr-xr-x  2 kostyan kostyan   4096 ноя 21 00:31 Public
+drwx------  3 kostyan kostyan   4096 ноя 21 00:31 snap
+-rw-r--r--  1 kostyan kostyan      0 ноя 21 00:33 .sudo_as_admin_successful
+drwxr-xr-x  2 kostyan kostyan   4096 ноя 21 00:31 Templates
+drwxr-xr-x  2 kostyan kostyan   4096 ноя 21 00:31 Videos
+kostyan@kostyan-VirtualBox:~$ mkdir ~/developer/123/
+kostyan@kostyan-VirtualBox:~$ chmod 1777 ~/developer/123/
+kostyan@kostyan-VirtualBox:~$ mkdir files
+kostyan@kostyan-VirtualBox:~$ touch ./files/file1
+kostyan@kostyan-VirtualBox:~$ touch ./files/file2
+kostyan@kostyan-VirtualBox:~$ touch ./files/file3
+kostyan@kostyan-VirtualBox:~$ chmod 331 ./files/
+kostyan@kostyan-VirtualBox:~$ ls -la ./files/
+ls: cannot open directory './files/': Permission denied
+kostyan@kostyan-VirtualBox:~$ cat ./files/file1
+kostyan@kostyan-VirtualBox:~$

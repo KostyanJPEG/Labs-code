@@ -1,0 +1,178 @@
+kostyan@kostyan-VirtualBox:~$ cat /etc/apt/sources.list | grep -v ^# | grep -v ^$
+deb http://ru.archive.ubuntu.com/ubuntu/ jammy main restricted
+deb http://ru.archive.ubuntu.com/ubuntu/ jammy-updates main restricted
+deb http://ru.archive.ubuntu.com/ubuntu/ jammy universe
+deb http://ru.archive.ubuntu.com/ubuntu/ jammy-updates universe
+deb http://ru.archive.ubuntu.com/ubuntu/ jammy multiverse
+deb http://ru.archive.ubuntu.com/ubuntu/ jammy-updates multiverse
+deb http://ru.archive.ubuntu.com/ubuntu/ jammy-backports main restricted universe multiverse
+deb http://security.ubuntu.com/ubuntu jammy-security main restricted
+deb http://security.ubuntu.com/ubuntu jammy-security universe
+deb http://security.ubuntu.com/ubuntu jammy-security multiverse
+kostyan@kostyan-VirtualBox:~$ sudo apt purge nginx
+[sudo] password for kostyan:cle
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Package 'nginx' is not installed, so not removed
+The following package was automatically installed and is no longer required:
+  systemd-hwe-hwdb
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 118 not upgraded.
+root@kostyan-VirtualBox:/etc/apt/sources.list.d# echo "deb http://nginx.org/packages/ubuntu focal nginx" > nginx.list
+root@kostyan-VirtualBox:/etc/apt/sources.list.d# curl -fsSL https://nginx.org/keys/nginx_signing.key | sudo apt-key add -
+OK
+kostyan@kostyan-VirtualBox:~$ ll /etc/apt/sources.list.d/
+total 8
+drwxr-xr-x 2 root root 4096 дек  9 18:45 ./
+drwxr-xr-x 8 root root 4096 ноя 21 00:25 ../
+-rw-r--r-- 1 root root    0 дек  9 18:46 nginx.list
+kostyan@kostyan-VirtualBox:~$ sudo apt update
+Hit:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+Get:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease [114 kB]
+Get:3 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease [99,8 kB]
+Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Get:5 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 DEP-11 Metadata [95,1 kB]
+Get:6 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 DEP-11 Metadata [257 kB]
+Get:7 http://ru.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 DEP-11 Metadata [940 B]
+Get:8 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 DEP-11 Metadata [11,7 kB]
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/main amd64 DEP-11 Metadata [20,1 kB]
+Get:10 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 DEP-11 Metadata [13,3 kB]
+Fetched 723 kB in 11s (63,9 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+118 packages can be upgraded. Run 'apt list --upgradable' to see them.
+kostyan@kostyan-VirtualBox:~$ sudo apt install nginx
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  systemd-hwe-hwdb
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+  libnginx-mod-http-geoip2 libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter
+  libnginx-mod-mail libnginx-mod-stream libnginx-mod-stream-geoip2 nginx-common nginx-core
+Suggested packages:
+  fcgiwrap nginx-doc
+The following NEW packages will be installed:
+  libnginx-mod-http-geoip2 libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter
+  libnginx-mod-mail libnginx-mod-stream libnginx-mod-stream-geoip2 nginx nginx-common nginx-core
+0 upgraded, 9 newly installed, 0 to remove and 118 not upgraded.
+Need to get 696 kB of archives.
+After this operation, 2 395 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 nginx-common all 1.18.0-6ubuntu14.3 [           40,0 kB]
+Get:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-http-geoip2 amd64 1.18.0           -6ubuntu14.3 [11,9 kB]
+Get:3 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-http-image-filter amd64            1.18.0-6ubuntu14.3 [15,4 kB]
+Get:4 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-http-xslt-filter amd64 1           .18.0-6ubuntu14.3 [13,7 kB]
+Get:5 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-mail amd64 1.18.0-6ubunt           u14.3 [45,7 kB]
+Get:6 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-stream amd64 1.18.0-6ubu           ntu14.3 [72,8 kB]
+Get:7 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-stream-geoip2 amd64 1.18           .0-6ubuntu14.3 [10,1 kB]
+Get:8 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 nginx-core amd64 1.18.0-6ubuntu14.3 [           482 kB]
+Get:9 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 nginx amd64 1.18.0-6ubuntu14.3 [3 882            B]
+Fetched 696 kB in 10s (68,3 kB/s)
+Preconfiguring packages ...
+Selecting previously unselected package nginx-common.
+(Reading database ... 176830 files and directories currently installed.)
+Preparing to unpack .../0-nginx-common_1.18.0-6ubuntu14.3_all.deb ...
+Unpacking nginx-common (1.18.0-6ubuntu14.3) ...
+Selecting previously unselected package libnginx-mod-http-geoip2.
+Preparing to unpack .../1-libnginx-mod-http-geoip2_1.18.0-6ubuntu14.3_amd64.deb ...
+Unpacking libnginx-mod-http-geoip2 (1.18.0-6ubuntu14.3) ...
+Selecting previously unselected package libnginx-mod-http-image-filter.
+Preparing to unpack .../2-libnginx-mod-http-image-filter_1.18.0-6ubuntu14.3_amd64.deb ...
+Unpacking libnginx-mod-http-image-filter (1.18.0-6ubuntu14.3) ...
+Selecting previously unselected package libnginx-mod-http-xslt-filter.
+Preparing to unpack .../3-libnginx-mod-http-xslt-filter_1.18.0-6ubuntu14.3_amd64.deb ...
+Unpacking libnginx-mod-http-xslt-filter (1.18.0-6ubuntu14.3) ...
+Selecting previously unselected package libnginx-mod-mail.
+Preparing to unpack .../4-libnginx-mod-mail_1.18.0-6ubuntu14.3_amd64.deb ...
+Unpacking libnginx-mod-mail (1.18.0-6ubuntu14.3) ...
+Selecting previously unselected package libnginx-mod-stream.
+Preparing to unpack .../5-libnginx-mod-stream_1.18.0-6ubuntu14.3_amd64.deb ...
+Unpacking libnginx-mod-stream (1.18.0-6ubuntu14.3) ...
+Selecting previously unselected package libnginx-mod-stream-geoip2.
+Preparing to unpack .../6-libnginx-mod-stream-geoip2_1.18.0-6ubuntu14.3_amd64.deb ...
+Unpacking libnginx-mod-stream-geoip2 (1.18.0-6ubuntu14.3) ...
+Selecting previously unselected package nginx-core.
+Preparing to unpack .../7-nginx-core_1.18.0-6ubuntu14.3_amd64.deb ...
+Unpacking nginx-core (1.18.0-6ubuntu14.3) ...
+Selecting previously unselected package nginx.
+Preparing to unpack .../8-nginx_1.18.0-6ubuntu14.3_amd64.deb ...
+Unpacking nginx (1.18.0-6ubuntu14.3) ...
+Setting up nginx-common (1.18.0-6ubuntu14.3) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /lib/systemd/system/nginx.se           rvice.
+Setting up libnginx-mod-http-xslt-filter (1.18.0-6ubuntu14.3) ...
+Setting up libnginx-mod-http-geoip2 (1.18.0-6ubuntu14.3) ...
+Setting up libnginx-mod-mail (1.18.0-6ubuntu14.3) ...
+Setting up libnginx-mod-http-image-filter (1.18.0-6ubuntu14.3) ...
+Setting up libnginx-mod-stream (1.18.0-6ubuntu14.3) ...
+Setting up libnginx-mod-stream-geoip2 (1.18.0-6ubuntu14.3) ...
+Setting up nginx-core (1.18.0-6ubuntu14.3) ...
+ * Upgrading binary nginx                                                                        [ OK ]
+Setting up nginx (1.18.0-6ubuntu14.3) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for ufw (0.36.1-4build1) ...
+kostyan@kostyan-VirtualBox:~$ ll /etc/nginx/
+total 80
+drwxr-xr-x   8 root root  4096 дек  9 19:00 ./
+drwxr-xr-x 130 root root 12288 дек  9 19:00 ../
+drwxr-xr-x   2 root root  4096 ноя 10 09:39 conf.d/
+-rw-r--r--   1 root root  1125 июл 27 04:32 fastcgi.conf
+-rw-r--r--   1 root root  1055 июл 27 04:32 fastcgi_params
+-rw-r--r--   1 root root  2837 июл 27 04:32 koi-utf
+-rw-r--r--   1 root root  2223 июл 27 04:32 koi-win
+-rw-r--r--   1 root root  3957 авг  2 10:22 mime.types
+drwxr-xr-x   2 root root  4096 ноя 10 09:39 modules-available/
+drwxr-xr-x   2 root root  4096 дек  9 19:00 modules-enabled/
+-rw-r--r--   1 root root  1447 июл 27 04:32 nginx.conf
+-rw-r--r--   1 root root   180 июл 27 04:32 proxy_params
+-rw-r--r--   1 root root   636 июл 27 04:32 scgi_params
+drwxr-xr-x   2 root root  4096 дек  9 19:00 sites-available/
+drwxr-xr-x   2 root root  4096 дек  9 19:00 sites-enabled/
+drwxr-xr-x   2 root root  4096 дек  9 19:00 snippets/
+-rw-r--r--   1 root root   664 июл 27 04:32 uwsgi_params
+-rw-r--r--   1 root root  3071 июл 27 04:32 win-utf
+kostyan@kostyan-VirtualBox:~$ sudo dpkg -P nginx
+(Reading database ... 176918 files and directories currently installed.)
+Removing nginx (1.18.0-6ubuntu14.3) ...
+kostyan@kostyan-VirtualBox:~$ ll /etc/nginx/
+ls: cannot access '/etc/nginx/': No such file or directory
+kostyan@kostyan-VirtualBox:~$ sudo snap install robomongo
+robomongo 0.9.0-rc9 from Francesco Banconi (frankban) installed
+kostyan@kostyan-VirtualBox:~$ sudo iptables -P INPUT DROP
+[sudo] password for kostyan:
+kostyan@kostyan-VirtualBox:~$ sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+[sudo] password for kostyan:
+kostyan@kostyan-VirtualBox:~$ sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPTkostyan@kostyan-VirtualBox:~$ sudo iptables-save
+# Generated by iptables-save v1.8.7 on Fri Dec  9 19:32:26 2022
+*filter
+:INPUT DROP [9:628]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+-A INPUT -p tcp -m tcp --dport 22 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
+COMMIT
+# Completed on Fri Dec  9 19:32:26 2022
+kostyan@kostyan-VirtualBox:~$ sudo iptables -t nat -A OUTPUT -o lo -p tcp --dport 80 -j REDIRECT --to-port 8080
+kostyan@kostyan-VirtualBox:~$ sudo iptables-save
+# Generated by iptables-save v1.8.7 on Fri Dec  9 19:36:32 2022
+*filter
+:INPUT ACCEPT [224:20801]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+-A INPUT -p tcp -m tcp --dport 22 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
+COMMIT
+# Completed on Fri Dec  9 19:36:32 2022
+# Generated by iptables-save v1.8.7 on Fri Dec  9 19:36:32 2022
+*nat
+:PREROUTING ACCEPT [0:0]
+:INPUT ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+:POSTROUTING ACCEPT [0:0]
+-A OUTPUT -o lo -p tcp -m tcp --dport 80 -j REDIRECT --to-ports 8080
+COMMIT
+# Completed on Fri Dec  9 19:36:32 2022
+kostyan@kostyan-VirtualBox:~$
